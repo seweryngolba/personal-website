@@ -73,7 +73,41 @@
   justify-content: center;
   border: 2px solid var(--primaryColor);
   background: var(--primaryColor);
-  width: 33px;
-  height: 33px;
+  width: 32px;
+  height: 32px;
   border-radius: 5px;
+  margin-top: -2px;
+}
+
+@media screen and (min-width: 768px) {
+  .heroContainer {
+    width: 720px;
+  }
+  .helloTitle {
+    font-size: 48px;
+  }
+  .nameTitle {
+    font-size: 86px;
+    height: 120px;
+  }
+  .textTitle {
+    font-size: 24px;
+    width: 480px;
+  }
+  .textBox {
+    gap: 2px;
+  }
+  .squareIcon {
+    font-size: 48px;
+  }
+  .mailLink {
+    width: 42px;
+    height: 42px;
+  }
+  .mailIcon {
+    font-size: 24px;
+  }
+  .linksBox {
+    padding-top: 10px;
+  }
 }
