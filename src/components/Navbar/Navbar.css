@@ -1,0 +1,53 @@
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--primaryColor);
+  border-radius: 50%;
+  color: var(--primaryColor);
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.cvLogo {
+  font-size: 18px;
+  color: var(--primaryColor);
+  font-weight: 700;
+  margin-right: 10px;
+  border: 2px solid var(--primaryColor);
+  border-radius: 20px;
+  width: 77px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .navContainer {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .logo,
+  .cvLogo {
+    transition: all 0.4s linear;
+  }
+  .logo:hover,
+  .cvLogo:hover {
+    color: black;
+    background: var(--primaryColor);
+  }
+}
