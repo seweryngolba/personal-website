@@ -1,0 +1,79 @@
+.heroContainer {
+  width: 300px;
+  height: 70vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.helloTitle {
+  font-size: 24px;
+}
+
+.nameTitle {
+  font-size: 42px;
+  color: var(--primaryColor);
+  border-right: 4px solid var(--primaryColor);
+  padding-right: 10px;
+  width: 100%;
+  height: 60px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(12), cursor 0.5s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+.textTitle {
+  font-size: 16px;
+  width: 280px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.linksBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.squareIcon {
+  font-size: 36px;
+  color: var(--primaryColor);
+}
+
+.mailIcon {
+  font-size: 18px;
+  color: black;
+}
+
+.mailLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primaryColor);
+  background: var(--primaryColor);
+  width: 33px;
+  height: 33px;
+  border-radius: 5px;
+}
