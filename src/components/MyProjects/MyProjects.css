@@ -1,0 +1,67 @@
+.projectsTitle {
+  font-size: 40px;
+  color: var(--primaryColor);
+  text-align: center;
+}
+
+.projectBox {
+  width: 290px;
+  height: 346px;
+  border: 3px solid var(--primaryColor);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.projectImage {
+  margin-top: 10px;
+  width: 260px;
+  height: 131px;
+  border-radius: 20px;
+}
+
+.projectName {
+  font-size: 20px;
+  color: var(--primaryColor);
+}
+
+.projectDescription {
+  width: 260px;
+  height: 105px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.projectButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.gitBtn {
+  padding: 2px 10px;
+  text-decoration: none;
+  border: 1px solid var(--primaryColor);
+  border-radius: 10px;
+  color: var(--primaryColor);
+}
+
+.demoBtn {
+  padding: 2px 16px;
+  text-decoration: none;
+  background: var(--primaryColor);
+  border-radius: 10px;
+  color: black;
+}
+
+.projectsContainer {
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  justify-content: center;
+}

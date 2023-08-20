@@ -1,19 +1,32 @@
 import "./MyProjects.css";
+import { projectsData } from "../../data/projectsData";
 
 const MyProjects = () => {
   return (
-    <div className="projectsContainer">
-      <h2>MY PROJECTS</h2>
-      <div className="projectBox">
-        <img></img>
-        <h3>HOME BUDGET</h3>
-        <p>lorem ipsum lorem ipsum</p>
-        <div className="projectButtons">
-          <a>GITHUB</a>
-          <a>DEMO</a>
-        </div>
+    <>
+      <h2 className="projectsTitle">MY PROJECTS</h2>
+      <div className="projectsContainer">
+        {projectsData.map((project, index) => (
+          <div className="projectBox" key={index}>
+            <img
+              className="projectImage"
+              src={project.image}
+              alt="project screen"
+            ></img>
+            <h3 className="projectName">{project.name}</h3>
+            <p className="projectDescription">{project.description}</p>
+            <div className="projectButtons">
+              <a href={project.github} className="gitBtn">
+                GITHUB
+              </a>
+              <a href={project.demo} className="demoBtn">
+                DEMO
+              </a>
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
+    </>
   );
 };
 
