@@ -16,10 +16,20 @@ const MyProjects = () => {
             <h3 className="projectName">{project.name}</h3>
             <p className="projectDescription">{project.description}</p>
             <div className="projectButtons">
-              <a href={project.github} className="gitBtn">
+              <a
+                href={project.github}
+                className="gitBtn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 GITHUB
               </a>
-              <a href={project.demo} className="demoBtn">
+              <a
+                href={project.demo}
+                className="demoBtn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 DEMO
               </a>
             </div>

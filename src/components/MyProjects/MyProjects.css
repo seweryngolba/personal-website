@@ -13,7 +13,12 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
+  gap: 4px;
   margin-top: 20px;
+}
+
+.projectBox:nth-of-type(2n) {
+  background: rgba(55, 255, 183, 0.2);
 }
 
 .projectImage {
