@@ -1,0 +1,79 @@
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.aboutTitle {
+  font-size: 40px;
+  color: var(--primaryColor);
+  text-align: center;
+}
+
+.aboutDescription {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.myAvatar {
+  width: 284px;
+  height: 420px;
+  background: lightblue;
+}
+
+.aboutBox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.nameAge {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.myName,
+.myAge {
+  position: relative;
+  font-size: 24px;
+  color: var(--primaryColor);
+}
+
+.myName::after {
+  content: "NAME";
+  position: absolute;
+  left: 0;
+  bottom: 24px;
+  color: white;
+  font-size: 16px;
+}
+
+.myAge::after {
+  content: "AGE";
+  position: absolute;
+  left: 0;
+  bottom: 24px;
+  color: white;
+  font-size: 16px;
+}
+
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.skillBar {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  gap: 20px;
+}

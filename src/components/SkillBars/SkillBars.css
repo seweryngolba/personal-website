@@ -1,0 +1,31 @@
+.skillBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.language {
+  font-weight: bold;
+  width: 110px;
+}
+
+.barsContainer {
+  display: flex;
+  align-items: center;
+}
+
+.bars {
+  display: flex;
+  gap: 5px;
+}
+
+.filledBar,
+.emptyBar {
+  width: 28px;
+  height: 12px;
+  border: 1px solid var(--primaryColor);
+}
+
+.filledBar {
+  background: var(--primaryColor);
+}
