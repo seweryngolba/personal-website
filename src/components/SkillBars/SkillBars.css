@@ -5,8 +5,11 @@
 }
 
 .language {
+  color: var(--primaryColor);
   font-weight: bold;
-  width: 110px;
+  font-size: 20px;
+  width: 130px;
+  position: relative;
 }
 
 .barsContainer {
@@ -21,11 +24,56 @@
 
 .filledBar,
 .emptyBar {
-  width: 28px;
-  height: 12px;
+  width: 25px;
+  height: 14px;
   border: 1px solid var(--primaryColor);
 }
 
 .filledBar {
   background: var(--primaryColor);
+}
+
+.language::after {
+  content: "";
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  bottom: 25px;
+  color: white;
+}
+
+.language.html::after {
+  content: "SKILLS";
+}
+
+.language.polish::after {
+  content: "LANGUAGES";
+}
+
+.skillBar.polish {
+  margin-top: 30px;
+}
+
+.myHobbies {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.myHobbies h4 {
+  font-size: 16px;
+  color: var(--primaryColor);
+}
+
+.myHobby {
+  position: relative;
+}
+
+.myHobby::after {
+  content: "HOBBIES";
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  color: white;
 }

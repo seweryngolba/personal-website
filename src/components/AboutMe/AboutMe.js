@@ -30,6 +30,12 @@ const AboutMe = () => {
               />
             ))}
           </div>
+          <div className="myHobbies">
+            <h4 className="myHobby">BASKETBALL</h4>
+            <h4>MUSIC</h4>
+            <h4>TRAVELS</h4>
+            <h4>BJJ</h4>
+          </div>
         </div>
       </div>
     </div>

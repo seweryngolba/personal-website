@@ -10,8 +10,8 @@ const SkillBars = ({ language, level }) => {
   ));
 
   return (
-    <div className="skillBar">
-      <div className="language">{language}</div>
+    <div className={`skillBar ${language.toLowerCase()}`}>
+      <div className={`language ${language.toLowerCase()}`}>{language}</div>
       <div className="barsContainer">
         <div className="bars">
           {filledBars}
