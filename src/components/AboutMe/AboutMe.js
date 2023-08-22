@@ -1,6 +1,7 @@
 import "./AboutMe.css";
 import skillsData from "../../data/skillsData";
 import SkillBars from "../SkillBars/SkillBars";
+import MyAvatar from "../MyAvatar/MyAvatar";
 
 const AboutMe = () => {
   return (
@@ -15,7 +16,9 @@ const AboutMe = () => {
         HOBBY
       </p>
       <div className="aboutBox">
-        <div className="myAvatar"></div>
+        <div className="myAvatar">
+          <MyAvatar />
+        </div>
         <div className="mySkills">
           <div className="nameAge">
             <h3 className="myName">SEWERYN GOLBA</h3>
