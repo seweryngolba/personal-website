@@ -6,18 +6,16 @@ const animationSrc = "/Waving.fbx";
 
 const MyAvatar = () => {
   return (
-    <div className="myAvatar">
-      <Avatar
-        animationSrc={animationSrc}
-        cameraInitialDistance={2.2}
-        cameraTarget={0.5}
-        modelSrc={modelSrc}
-        onLoadedAnimation={{
-          loop: 1,
-          src: "/Waving.fbx",
-        }}
-      />
-    </div>
+    <Avatar
+      animationSrc={animationSrc}
+      cameraInitialDistance={2.2}
+      cameraTarget={0.5}
+      modelSrc={modelSrc}
+      onLoadedAnimation={{
+        loop: 1,
+        src: "/Waving.fbx",
+      }}
+    />
   );
 };
 
