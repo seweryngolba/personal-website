@@ -1,0 +1,32 @@
+.contact {
+  width: 920px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.avatarBox {
+  width: 320px;
+  height: 640px;
+  background: lightblue;
+}
+
+.contactTitle {
+  font-size: 64px;
+  color: var(--primaryColor);
+}
+
+.textContact {
+  width: 320px;
+  height: 400px;
+  border: 2px solid var(--primaryColor);
+  background: transparent;
+  border-radius: 10px;
+}
+
+.textContact::placeholder {
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+}
