@@ -1,14 +1,14 @@
 .contact {
-  width: 920px;
-  margin: 0 auto;
+  width: 880px;
+  margin: 40px auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
 .avatarBox {
   width: 320px;
-  height: 640px;
+  height: 540px;
   background: lightblue;
 }
 
@@ -18,8 +18,8 @@
 }
 
 .textContact {
-  width: 320px;
-  height: 400px;
+  width: 460px;
+  height: 300px;
   border: 2px solid var(--primaryColor);
   background: transparent;
   border-radius: 10px;
@@ -29,4 +29,14 @@
   padding: 10px;
   color: white;
   font-size: 16px;
+  outline: none;
+}
+
+.textContact:active {
+  border: 2px solid var(--primaryColor);
+}
+
+.myInfo h3 {
+  text-align: center;
+  padding-top: 10px;
 }

@@ -8,10 +8,13 @@ const ContactBox = () => {
         <h2 className="contactTitle">CONTACT</h2>
         <textarea
           className="textContact"
-          rows={4}
-          cols={50}
           placeholder="Enter your text here..."
         />
+        <div className="myInfo">
+          <h3>SEWERYN GOLBA</h3>
+          <h3>EMAIL: SGOOLB@GMAIL.COM</h3>
+          <h3>PHONE: 881 515 126</h3>
+        </div>
       </div>
     </div>
   );
