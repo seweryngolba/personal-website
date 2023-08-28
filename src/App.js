@@ -2,6 +2,7 @@ import "./App.css";
 import AboutMe from "./components/AboutMe/AboutMe";
 import ContactBox from "./components/ContactBox/ContactBox";
 import Falling from "./components/Falling/Falling";
+import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
 import Landing from "./components/Landing/Landing";
 import MyProjects from "./components/MyProjects/MyProjects";
@@ -29,39 +30,23 @@ function App() {
   return (
     <>
       <ScrollContainer>
-        <ScrollPage>
-          <Navbar />
-          <Hero />
-        </ScrollPage>
-        <ScrollPage>
-          <Animator>
-            <MyProjects />
-          </Animator>
-        </ScrollPage>
-        <ScrollPage>
-          <Animator>
-            <AboutMe />
-          </Animator>
-        </ScrollPage>
-        <ScrollPage>
-          <Animator animation={batch(Sticky(), Fade())}>
-            <Falling />
-          </Animator>
-        </ScrollPage>
+        <Navbar />
+        <Hero />
+        <MyProjects />
+        <AboutMe />
         <ScrollPage>
           <div className="contactSection">
             <div className="avLanding">
-              <Animator animation={Move(0, -4000)}>
-                <Landing />
-              </Animator>
+              <Animator animation={Move(0, -1000)}></Animator>
             </div>
+            <Landing />
             <div className="contactContainer">
-              <Animator animation={Fade()}>
-                <ContactBox />
-              </Animator>
+              <Animator animation={Fade()}></Animator>
+              <ContactBox />
             </div>
           </div>
         </ScrollPage>
+        <Footer />
       </ScrollContainer>
     </>
   );

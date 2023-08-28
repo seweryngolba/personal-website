@@ -4,24 +4,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  flex-direction: column-reverse;
+  gap: 10px;
 }
 
 .contact {
   width: 880px;
-  margin: 40px auto;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
 }
 
 .contactTitle {
-  font-size: 64px;
+  font-size: 40px;
   color: var(--primaryColor);
+  text-align: center;
 }
 
 .textContact {
-  width: 460px;
+  width: 290px;
   height: 300px;
   border: 2px solid var(--primaryColor);
   background: transparent;
@@ -42,4 +43,14 @@
 .myInfo h3 {
   text-align: center;
   padding-top: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .contactSection {
+    width: 100%;
+    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 10px;
+  }
 }

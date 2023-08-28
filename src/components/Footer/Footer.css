@@ -1,0 +1,6 @@
+.footer {
+  height: 50px;
+  background: var(--primaryColor);
+  font-size: 18px;
+  font-weight: bold;
+}
