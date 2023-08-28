@@ -3,6 +3,7 @@ import AboutMe from "./components/AboutMe/AboutMe";
 import ContactBox from "./components/ContactBox/ContactBox";
 import Falling from "./components/Falling/Falling";
 import Hero from "./components/Hero/Hero";
+import Landing from "./components/Landing/Landing";
 import MyProjects from "./components/MyProjects/MyProjects";
 import Navbar from "./components/Navbar/Navbar";
 import {
@@ -40,6 +41,9 @@ function App() {
         </ScrollPage>
         <ScrollPage>
           <Falling />
+        </ScrollPage>
+        <ScrollPage>
+          <Landing />
         </ScrollPage>
       </ScrollContainer>
     </>
