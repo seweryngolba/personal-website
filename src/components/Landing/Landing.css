@@ -1,0 +1,8 @@
+.avLanding {
+  width: 320x;
+  height: 520px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

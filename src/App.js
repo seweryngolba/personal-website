@@ -34,16 +34,33 @@ function App() {
           <Hero />
         </ScrollPage>
         <ScrollPage>
-          <MyProjects />
+          <Animator>
+            <MyProjects />
+          </Animator>
         </ScrollPage>
         <ScrollPage>
-          <AboutMe />
+          <Animator>
+            <AboutMe />
+          </Animator>
         </ScrollPage>
         <ScrollPage>
-          <Falling />
+          <Animator animation={batch(Sticky(), Fade())}>
+            <Falling />
+          </Animator>
         </ScrollPage>
         <ScrollPage>
-          <Landing />
+          <div className="contactSection">
+            <div className="avLanding">
+              <Animator animation={Move(0, -4000)}>
+                <Landing />
+              </Animator>
+            </div>
+            <div className="contactContainer">
+              <Animator animation={Fade()}>
+                <ContactBox />
+              </Animator>
+            </div>
+          </div>
         </ScrollPage>
       </ScrollContainer>
     </>
@@ -51,17 +68,3 @@ function App() {
 }
 
 export default App;
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <Navbar />
-//       <Hero />
-//       <MyProjects />
-//       <AboutMe />
-//       <ContactBox />
-//     </div>
-//   );
-// }
-
-// export default App;
