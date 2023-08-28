@@ -1,0 +1,15 @@
+.fallContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.falling {
+  width: 520px;
+  height: 420px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+}

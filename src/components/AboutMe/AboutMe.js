@@ -2,7 +2,6 @@ import "./AboutMe.css";
 import skillsData from "../../data/skillsData";
 import SkillBars from "../SkillBars/SkillBars";
 import MyAvatar from "../MyAvatar/MyAvatar";
-import { useEffect, useState } from "react";
 
 const AboutMe = () => {
   return (
