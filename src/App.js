@@ -1,7 +1,6 @@
 import "./App.css";
 import AboutMe from "./components/AboutMe/AboutMe";
 import ContactBox from "./components/ContactBox/ContactBox";
-import Falling from "./components/Falling/Falling";
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
 import Landing from "./components/Landing/Landing";
