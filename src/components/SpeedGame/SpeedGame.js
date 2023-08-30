@@ -1,7 +1,8 @@
-import "./SpeedGame.css";
+import React, { useState, useEffect } from "react";
+import "./SpeedGame.css"; // Import your CSS file
 
-import { useEffect, useState } from "react";
+const SpeedGame = () => {
+  return <div className="container"></div>;
+};
 
-export default function SpeedGame() {
-  return;
-}
+export default SpeedGame;
