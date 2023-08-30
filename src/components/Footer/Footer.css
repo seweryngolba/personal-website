@@ -1,6 +1,10 @@
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 50px;
-  background: var(--primaryColor);
+  border-top: 2px solid var(--primaryColor);
   font-size: 18px;
   font-weight: bold;
+  color: var(--primaryColor);
 }
