@@ -1,54 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./SpeedGame.css";
+import Word from "../../functions/Word";
+import Timer from "../../functions/Timer";
 
 const getTextToType = () =>
-  "Some random text to type to check speed I change it later I put here fake contact message to check typing speed".split(
+  "Hi, Seweryn, I'm really impressed by your website and I'm reaching out to initiate a collaboration with you and schedule a conversation. This is just a typing speed test, but I would be thrilled if you genuinely enjoyed it and would like to get in touch. Below you'll find all the contact details.".split(
     " "
   );
-
-function Word(props) {
-  const { text, active, correct } = props;
-
-  if (correct === true) {
-    return <span className="correct">{text} </span>;
-  }
-  if (correct === false) {
-    return <span className="incorrect">{text} </span>;
-  }
-  if (active) {
-    return <span className="active">{text} </span>;
-  }
-  return <span>{text} </span>;
-}
-
-Word = React.memo(Word);
-
-function Timer(props) {
-  const { correctWords, startCounting } = props;
-  const [timeElapsed, setTimeElapsed] = useState(0);
-
-  useEffect(() => {
-    let id;
-    if (startCounting) {
-      id = setInterval(() => {
-        setTimeElapsed((oldTime) => oldTime + 1);
-      }, 1000);
-    }
-
-    return () => {
-      clearInterval(id);
-    };
-  }, [startCounting]);
-
-  const minutes = timeElapsed / 60;
-
-  return (
-    <div>
-      <p>Time: {timeElapsed}</p>
-      <p>Speed: {(correctWords / minutes || 0).toFixed(2)} WPM</p>
-    </div>
-  );
-}
 
 const SpeedGame = () => {
   const [userInput, setUserInput] = useState("");
@@ -89,13 +47,10 @@ const SpeedGame = () => {
 
   return (
     <div className="containerContact">
+      <h2 className="titleContact">CONTACT</h2>
+      <div className="myPhoto"></div>
       <div className="gameBox">
-        <h2>CONTACT</h2>
-        <Timer
-          startCounting={startCounting}
-          correctWords={correctWordArray.filter(Boolean).length}
-        />
-        <p>
+        <p className="typingText">
           {textToType.current.map((word, index) => {
             return (
               <Word
@@ -106,7 +61,13 @@ const SpeedGame = () => {
             );
           })}
         </p>
+        <Timer
+          startCounting={startCounting}
+          correctWords={correctWordArray.filter(Boolean).length}
+        />
         <input
+          className="inputGame"
+          placeholder="Start typing..."
           type="text"
           value={userInput}
           onChange={(e) => processInput(e.target.value)}
@@ -117,7 +78,6 @@ const SpeedGame = () => {
           <p>TEL: 881 515 126</p>
         </div>
       </div>
-      <div className="myPhoto"></div>
     </div>
   );
 };

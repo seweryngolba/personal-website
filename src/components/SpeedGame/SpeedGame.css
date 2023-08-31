@@ -2,31 +2,78 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  margin: 40px 0;
+  flex-direction: column;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.titleContact {
+  font-size: 40px;
+  color: var(--primaryColor);
 }
 
 .myPhoto {
-  width: 320px;
-  height: 420px;
+  width: 280px;
+  height: 340px;
   background: lightcoral;
   position: relative;
 }
 
+.typingText {
+  width: 290px;
+  padding: 10px;
+  border: 2px solid var(--primaryColor);
+  border-radius: 10px;
+  text-align: justify;
+}
+
+.speedStats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.gameBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.inputGame {
+  border: 2px solid var(--primaryColor);
+  border-radius: 5px;
+  width: 280px;
+  background: transparent;
+  padding: 4px 10px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.inputGame::placeholder {
+  color: white;
+}
+
 .myPhoto::before {
   content: "";
-  width: 320px;
-  height: 420px;
+  width: 280px;
+  height: 340px;
   background: transparent;
   border: 2px solid var(--primaryColor);
   position: absolute;
-  bottom: 8px;
-  left: 8px;
+  bottom: 4px;
+  left: 4px;
   z-index: -1;
 }
 
 .realInfo {
   text-align: center;
+}
+
+.realInfo p {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .correct {
