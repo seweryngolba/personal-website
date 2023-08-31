@@ -24,15 +24,30 @@ function Word(props) {
 Word = React.memo(Word);
 
 function Timer(props) {
-  const [speed, setSpeed] = useState(0);
+  const { correctWords, startCounting } = props;
+  const [timeElapsed, setTimeElapsed] = useState(0);
 
   useEffect(() => {
-    if (props.startCounting) {
-      setInterval(() => {}, 1000);
+    let id;
+    if (startCounting) {
+      id = setInterval(() => {
+        setTimeElapsed((oldTime) => oldTime + 1);
+      }, 1000);
     }
-  }, [props.startCounting]);
 
-  return <p>Speed: {speed}</p>;
+    return () => {
+      clearInterval(id);
+    };
+  }, [startCounting]);
+
+  const minutes = timeElapsed / 60;
+
+  return (
+    <div>
+      <p>Time: {timeElapsed}</p>
+      <p>Speed: {(correctWords / minutes || 0).toFixed(2)} WPM</p>
+    </div>
+  );
 }
 
 const SpeedGame = () => {
@@ -43,13 +58,22 @@ const SpeedGame = () => {
   const [correctWordArray, setCorrectWordArray] = useState([]);
 
   function processInput(value) {
-    if (startCounting) {
+    if (activeWordIndex === textToType.current.length) {
+      return;
+    }
+
+    if (!startCounting) {
       setStartCounting(true);
     }
 
     if (value.endsWith(" ")) {
+      if (activeWordIndex === textToType.current.length - 1) {
+        setStartCounting(false);
+        setUserInput("Completed");
+      } else {
+        setUserInput("");
+      }
       setActiveWordIndex((index) => index + 1);
-      setUserInput("");
 
       setCorrectWordArray((data) => {
         const word = value.trim();
@@ -67,7 +91,10 @@ const SpeedGame = () => {
     <div className="containerContact">
       <div className="gameBox">
         <h2>CONTACT</h2>
-        <Timer startCounting={false} />
+        <Timer
+          startCounting={startCounting}
+          correctWords={correctWordArray.filter(Boolean).length}
+        />
         <p>
           {textToType.current.map((word, index) => {
             return (
