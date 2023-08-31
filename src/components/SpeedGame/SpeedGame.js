@@ -2,6 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import "./SpeedGame.css";
 import Word from "../../functions/Word";
 import Timer from "../../functions/Timer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 const getTextToType = () =>
   "Hi, Seweryn, I'm really impressed by your website and I'm reaching out to initiate a collaboration with you and schedule a conversation. This is just a typing speed test, but I would be thrilled if you genuinely enjoyed it and would like to get in touch. Below you'll find all the contact details.".split(
@@ -46,39 +49,61 @@ const SpeedGame = () => {
   }
 
   return (
-    <div className="containerContact">
+    <>
       <h2 className="titleContact">CONTACT</h2>
-      <div className="myPhoto"></div>
-      <div className="gameBox">
-        <p className="typingText">
-          {textToType.current.map((word, index) => {
-            return (
-              <Word
-                text={word}
-                active={index === activeWordIndex}
-                correct={correctWordArray[index]}
-              />
-            );
-          })}
-        </p>
-        <Timer
-          startCounting={startCounting}
-          correctWords={correctWordArray.filter(Boolean).length}
-        />
-        <input
-          className="inputGame"
-          placeholder="Start typing..."
-          type="text"
-          value={userInput}
-          onChange={(e) => processInput(e.target.value)}
-        />
-        <div className="realInfo">
-          <p>SEWERYN GOLBA</p>
-          <p>EMAIL: SGOOLB@GMAIL.COM</p>
-          <p>TEL: 881 515 126</p>
+      <div className="containerContact">
+        <div className="myPhoto"></div>
+        <div className="gameBox">
+          <p className="typingText">
+            {textToType.current.map((word, index) => {
+              return (
+                <Word
+                  key={index}
+                  text={word}
+                  active={index === activeWordIndex}
+                  correct={correctWordArray[index]}
+                />
+              );
+            })}
+          </p>
+          <Timer
+            startCounting={startCounting}
+            correctWords={correctWordArray.filter(Boolean).length}
+          />
+          <input
+            className="inputGame"
+            placeholder="Start typing..."
+            type="text"
+            value={userInput}
+            onChange={(e) => processInput(e.target.value)}
+          />
+          <div className="realInfo">
+            <p>SEWERYN GOLBA</p>
+            <p>EMAIL: SGOOLB@GMAIL.COM</p>
+            <p>TEL: 881 515 126</p>
+            <div className="linksBox">
+              <a
+                href="https://www.linkedin.com/in/seweryn-golba-284002251/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon className="squareIcon" icon={faLinkedin} />
+              </a>
+              <a
+                href="https://github.com/seweryngolba"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon className="squareIcon" icon={faSquareGithub} />
+              </a>
+              <a href="mailto:sgoolb@gmail.com" className="mailLink">
+                <FontAwesomeIcon className="mailIcon" icon={faPaperPlane} />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

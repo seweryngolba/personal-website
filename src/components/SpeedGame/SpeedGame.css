@@ -8,8 +8,10 @@
 }
 
 .titleContact {
+  text-align: center;
   font-size: 40px;
   color: var(--primaryColor);
+  margin-top: 10px;
 }
 
 .myPhoto {
@@ -48,7 +50,7 @@
   background: transparent;
   padding: 4px 10px;
   color: white;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 .inputGame::placeholder {
@@ -68,6 +70,7 @@
 }
 
 .realInfo {
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -88,4 +91,51 @@
 
 .active {
   font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .containerContact {
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 40px;
+  }
+  .myPhoto {
+    height: 440px;
+  }
+  .myPhoto::before {
+    height: 440px;
+    bottom: 8px;
+    left: 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .typingText {
+    width: 540px;
+    font-size: 18px;
+  }
+  .speedStats {
+    font-size: 18px;
+  }
+  .inputGame {
+    width: 420px;
+    padding: 8px 10px;
+    font-size: 16px;
+  }
+  .realInfo p {
+    font-size: 24px;
+  }
+  .titleContact {
+    font-size: 64px;
+    margin-top: 10px;
+  }
+  .containerContact {
+    padding-bottom: 30px;
+  }
+  .myPhoto {
+    height: 450px;
+  }
+  .myPhoto::before {
+    height: 450px;
+  }
 }
