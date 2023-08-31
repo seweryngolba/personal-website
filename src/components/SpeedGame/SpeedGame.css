@@ -28,3 +28,17 @@
 .realInfo {
   text-align: center;
 }
+
+.correct {
+  font-weight: bold;
+  color: var(--primaryColor);
+}
+
+.incorrect {
+  font-weight: bold;
+  color: red;
+}
+
+.active {
+  font-weight: bold;
+}
