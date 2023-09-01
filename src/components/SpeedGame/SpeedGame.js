@@ -53,7 +53,7 @@ const SpeedGame = () => {
       <h2 className="titleContact">CONTACT</h2>
       <div className="containerContact">
         <div className="myPhoto">
-          <img alt="Me" src={realPhoto}></img>
+          <img className="realPhoto" alt="Me" src={realPhoto}></img>
         </div>
         <div className="gameBox">
           <p className="typingText">
