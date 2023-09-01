@@ -98,6 +98,9 @@
   .myPhoto {
     height: 440px;
   }
+  .realPhoto {
+    margin-top: 13px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -125,5 +128,8 @@
   }
   .myPhoto {
     height: 450px;
+  }
+  .realPhoto {
+    margin-top: 18px;
   }
 }
