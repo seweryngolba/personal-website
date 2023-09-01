@@ -4,7 +4,7 @@ import Word from "../../functions/Word";
 import Timer from "../../functions/Timer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import realPhoto from "../../assets/myphoto.png";
 
 const getTextToType = () =>
   "Hi, Seweryn, I'm really impressed by your website and I'm reaching out to initiate a collaboration with you and schedule a conversation. This is just a typing speed test, but I would be thrilled if you genuinely enjoyed it and would like to get in touch. Below you'll find all the contact details.".split(
@@ -52,7 +52,9 @@ const SpeedGame = () => {
     <>
       <h2 className="titleContact">CONTACT</h2>
       <div className="containerContact">
-        <div className="myPhoto"></div>
+        <div className="myPhoto">
+          <img alt="Me" src={realPhoto}></img>
+        </div>
         <div className="gameBox">
           <p className="typingText">
             {textToType.current.map((word, index) => {
@@ -95,9 +97,6 @@ const SpeedGame = () => {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon className="squareIcon" icon={faSquareGithub} />
-              </a>
-              <a href="mailto:sgoolb@gmail.com" className="mailLink">
-                <FontAwesomeIcon className="mailIcon" icon={faPaperPlane} />
               </a>
             </div>
           </div>
