@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import "./SpeedGame.css";
 import Word from "../../functions/Word";
 import Timer from "../../functions/Timer";

@@ -1,4 +1,3 @@
-import React from "react";
 import { Avatar } from "@readyplayerme/visage";
 
 const modelSrc = "https://models.readyplayer.me/64dcddc1cfdd0f000df9468c.glb";
