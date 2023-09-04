@@ -1,7 +1,7 @@
 import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import cvPdf from "../../assets/CV Seweryn Golba.pdf";
+import cvPdf from "../../assets/Seweryn Golba CV.pdf";
 
 const Navbar = () => {
   return (
